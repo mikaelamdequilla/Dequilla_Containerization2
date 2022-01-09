@@ -5,11 +5,6 @@
     path: docker
     state: directory
 
-- name: Copy from docker directory files to remote machine
-  copy:
-    src: docker/
-    dest: docker/
-
 - name: Build Web server Docker image from Dockerfile
   docker_image:
     name: "{{ web_docker_img_name }}"

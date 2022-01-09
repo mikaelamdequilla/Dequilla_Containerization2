@@ -3,6 +3,10 @@
     hosts: all
 
     tasks:
+    - name: Include variables from config.yaml
+      include_vars:
+        file: config.yaml
+
     - name: Build and run LAMP stack using lampstackdocker role
       include_role:
         name: lamp_docker
